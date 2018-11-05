@@ -56,8 +56,6 @@ const pushToDOM = (parsedData, option) => {
   } else if (option == 'center') {
     const imgURL = imgDataSet[0].images.fixed_height.url;
     const imgTitle = imgDataSet[0].title;
-    console.log(imgURL);
-    console.log(imgTitle);
     centerImgArea.innerHTML = `<img src="${imgURL}" alt="${imgTitle}" class="img-center"/>`;
   }
 };
