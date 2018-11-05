@@ -13,6 +13,7 @@ h1 {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  height: 300px;
 }
 
 .container-padding50{
