@@ -42,11 +42,6 @@ var admins = users.filter(function(user) {
 /* 실습 3 */
 var numbers = [10, 20, 30];
 
-function dd (number){
-  return number > 15;
-}
-
-numbers.filter(dd);
 function reject(arr, iterFunc) {
   return arr.filter((el) => {
     var isExist = false;
