@@ -8,8 +8,8 @@
 --------------
 ## 1.1. 주요 기능
 
-- [EventListener](#1.1.1.EventListener)
-- [AJAX](#1.1.2.AJAX)
+- [EventListener](#1.1.1._EventListener)
+- [AJAX](#1.1.2._AJAX)
 
 ### 1.1.1. EventListener
 - `EventListner`는 다양한 **event**를 가지고 있다. 마우스, 키보드 등으로 입력에 변화를 주었을 때 일어나는 일들에 대해 **callback 함수**를 호출할 수 있다.
