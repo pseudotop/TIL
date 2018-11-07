@@ -3,6 +3,7 @@
 <p align="center">
 <img src="https://user-images.githubusercontent.com/11497589/48048146-d907f700-e1dd-11e8-9024-486a52b83e6c.JPG" width="70%"/>
 </p>
+
 -----------
 
 - 지난 **giphy-search-engine**과 마찬가지로 외부 API를 활용하는 `static page`를 만든다
