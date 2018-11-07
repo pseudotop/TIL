@@ -3,8 +3,8 @@
 **실행 화면**
 
 <div style="float:left">
-<img width="50%" src="https://user-images.githubusercontent.com/11497589/48119905-e8f20a80-e2b3-11e8-90ea-4b3b66936fbf.JPG">
-<img width="50%" src="https://user-images.githubusercontent.com/11497589/48119906-e8f20a80-e2b3-11e8-9f4a-9031a212dbef.JPG">
+<img width="40%" src="https://user-images.githubusercontent.com/11497589/48119905-e8f20a80-e2b3-11e8-90ea-4b3b66936fbf.JPG">
+<img width="40%" src="https://user-images.githubusercontent.com/11497589/48119906-e8f20a80-e2b3-11e8-9f4a-9031a212dbef.JPG">
 </div>
 
 --------------
