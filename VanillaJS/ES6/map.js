@@ -1,4 +1,4 @@
-/* ES5 map() */
+/* ES5 for() */
 var numbers = [1,2,3];
 var dNumbers = [];
 
