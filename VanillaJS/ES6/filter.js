@@ -1,4 +1,4 @@
-/* ES5 filter() */
+/* ES5 for() */
 var products = [
   { name: 'banana', type: 'fruit' },
   { name: 'carrot', type: 'vegetable' },
@@ -13,7 +13,7 @@ for (var i = 0; i < products.length; i++){
     fruits.push(products[i]);
   }
 }
-/* ES6 map */
+/* ES6 filter */
 var vegetables = products.filter(function(product) {
   return product.type === 'vegetable';
 });
@@ -42,6 +42,7 @@ var admins = users.filter(function(user) {
 /* 실습 3 */
 var numbers = [10, 20, 30];
 
+/* 내가 푼 솔루션 */
 function reject(arr, iterFunc) {
   return arr.filter((el) => {
     var isExist = false;
@@ -52,8 +53,23 @@ function reject(arr, iterFunc) {
   });
 };
 
-var lessThan15 = reject(numbers, function(number) {
+/* 강사님 솔루션 */
+function reject(array, iterFunction) {
+  return array.filter(function(element) {
+    return !iterFunction(element);
+  });
+}
+
+function myFunction (number) {
   return number > 15;
-});
+};
+
+myFunction(10) // false
+myFunction(20) // true
+
+// var lessThan15 = reject(numbers, function(number) {
+//   return number > 15;
+// });
+var lessThan15 = reject(numbers, myFunction);
 
 console.log(lessThan15); // 10
