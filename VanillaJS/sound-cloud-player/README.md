@@ -1,4 +1,10 @@
 # 2. SoundCloud Player 만들기
+**실행 화면**
+<p align="center">
+<img src="https://user-images.githubusercontent.com/11497589/48048146-d907f700-e1dd-11e8-9024-486a52b83e6c.JPG" width="70%"/>
+</p>
+-----------
+
 - 지난 **giphy-search-engine**과 마찬가지로 외부 API를 활용하는 `static page`를 만든다
 - SoundCloud의 API (https://developers.soundcloud.com/)는 `Promise`를 활용하는 API다
   - 현재(18/11/06)는 API 접근 토근을 받을 수 없다. ~~임시로 닫아놓았다~~

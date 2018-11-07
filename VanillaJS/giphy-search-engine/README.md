@@ -1,5 +1,12 @@
 # 1. XML Parsing
 
+**실행 화면**
+<div style="float:left">
+<img align="left" width="50%" src="https://user-images.githubusercontent.com/11497589/48119905-e8f20a80-e2b3-11e8-90ea-4b3b66936fbf.JPG">
+<img align="right" width="50%" src="https://user-images.githubusercontent.com/11497589/48119906-e8f20a80-e2b3-11e8-9f4a-9031a212dbef.JPG">
+</div>
+-----------
+
 - 본 프로젝트는  `static page`의 작동원리 이해를 위한 가이드다. `HTML`, `CSS`, `JavaScript`를 활용하여 간단한 동작 예시를 구현하였다.
 - `JavaScript`는 `ECMAScript 6(ES6)`를 사용하였다. 다음과 같은 `ES6` 양식을 사용하였다.
   * const, let
