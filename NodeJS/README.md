@@ -1,12 +1,13 @@
 # Node.js
-> `node.js`는 브라우저 엔진기반(Chrome V8) 런타임이다. 
+> `node.js`는 브라우저 엔진(Chrome V8)으로 빌드된 `javascript` 런타임이다. 
 ## 특성
-- REPL (Read Evaluate Print Loop) 제공
+- REPL (Read Evaluate Print Loop) **Runtime** 제공
 ```bash
 $ node
 # REPL 환경으로 접속
 >
 ```
+- `javascript`런타임이므로 비동기(Non-Blocking) I/O, 싱글 스레드(이벤트 루프로만 한정할 때), 이벤트 루프의 특징을 가진다.
 - 전역 객체 `global`을 지님. `javascript`는 `document`
 - 노드에서 `.js`를 실행하면 `file`이 아닌 `module`로 로드함
 - `node.js`로 모듈을 불러오면 자동으로 외부에 **function scope**하나가 붙는다
@@ -37,7 +38,7 @@ Module.wrapper = [
 ];
 ...
 ```
-- 모듈 load에도 순서가 있다
+- 모듈 load(`require('module')`)에도 순서가 있다
   1. 내장 모듈 찾기. 없으면 다음으로
   2. 외장 모듈 찾기. 없으면 다음으로
   3. 폴더 찾기
