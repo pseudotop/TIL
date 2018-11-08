@@ -12,9 +12,9 @@
   - 강사님의 토큰으로 접근하고 있으니 **나중에 변경이 필요**
 - 브라우저가 새로고침되거나 닫았다가 다시 실행할 때, 세션과 비슷한 `LocalStorage`(https://developer.mozilla.org/ko/docs/Web/API/Window/localStorage)를 사용한다
 ## 2.1. 주요 기능
-- [API using Promise](#2.1.1._API_using_Promise)
-- [DOM 다루기](#2.1.2._DOM_다루기)
-- [LocalStorage 사용](#2.1.3._LocalStorage_사용)
+- [API using Promise](#211-API-using-Promise)
+- [DOM 다루기](#212-DOM-다루기)
+- [LocalStorage 사용](#213-LocalStorage-사용)
 ### 2.1.1. API using Promise
 - `Promise`는 **콜백 문제**를 타개하기 위한 패턴 중 하나이다.
 - `javascript/main.js`
