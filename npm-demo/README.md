@@ -89,7 +89,7 @@ package.json
 > dependencies & version
 - `"express": "4.16.4"` : `"모듈명": "Major.Minor.Patch"`
 
-- 이를 **시맨틱 버저닝**(https://semver.org/)이라고 한다
+- 이를 **시맨틱 버저닝**[https://semver.org/](https://semver.org/)이라고 한다
 
   | 표시 버전   | 버저닝(Versioning) | 활용 예시                                                    |
   | ----------- | ------------------ | :----------------------------------------------------------- |

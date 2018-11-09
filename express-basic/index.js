@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
 
+app.use(express.json());
+
 app.get('/', (req, res) => {
   res.send('Happy Hacking');
 });
@@ -13,9 +15,9 @@ app.get('/:name', (req, res) => {
 // CREATE READ UPDATE DESTROY
 // POST   GET  PUT    DELETE
 const movies = [
-  { id: 1, name: 'Hello'},
-  { id: 2, name: 'Her'},
-  { id: 3, name: 'Hack'},
+  { id: 1, title: 'Hello'},
+  { id: 2, title: 'Her'},
+  { id: 3, title: 'Hack'},
 ];
 
 /* GET /api/movies */
@@ -33,8 +35,15 @@ app.get('/api/movies/:id', (req, res) => {
   res.send(movie);
 });
 
-/* POST /api/movies/1 */
-// app.post();
+/* POST /api/movies */
+app.post('/api/movies', (req, res) => {
+  const movie = {
+    id: movies.length + 1,
+    title: req.body.title
+  };
+  movies.push(movie);
+  res.send(movie);
+});
 
 /* PUT /api/movies/1 */
 // app.put();
