@@ -79,7 +79,7 @@ app.put('/api/movies/:id', (req, res) => {
       }
     });
     if (!movie) {
-      res.status(400).send(`id ${req.params.id} is not exist.`);
+      res.status(404).send(`id ${req.params.id} is not exist.`);
     } else {
       res.send(`id ${movie.id} is modified.`);
     }
@@ -87,27 +87,39 @@ app.put('/api/movies/:id', (req, res) => {
 });
 
 /* DELETE /api/movies/1 */
+// app.delete('/api/movies/:id', (req, res) => {
+//   const schema = {
+//     id: Joi.number().required()
+//   };
+//   // console.log(req);
+//   const result = Joi.validate(req.params, schema);
+//   if (result.error) {
+//     res.status(400).send(result.error.message);
+//   } else {
+//     movies.find((movie, index) => {
+//       if (movie.id === parseInt(req.params.id)) {
+//         movies.splice(index,1);
+//         return true;
+//       } else {
+//         return false;
+//       }
+//     });
+//   }
+//   res.send(movies);
+// });
 app.delete('/api/movies/:id', (req, res) => {
-  const schema = {
-    id: Joi.number().required()
-  };
-  // console.log(req);
-  const result = Joi.validate(req.params, schema);
-  if (result.error) {
-    res.status(400).send(result.error.message);
-  } else {
-    movies.find((movie, index) => {
-      if (movie.id === parseInt(req.params.id)) {
-        movies.splice(index,1);
-        return true;
-      } else {
-        return false;
-      }
-    });
-  }
-  res.send(movies);
-});
+  // movies 에서 id 로 movie 찾기
+  const movie = movies.find( movie => movie.id === parseInt(req.params.id));
+  // 없으면 404
+  if (!movie) return res.status(404).send(`The movie with the given ID is not exist`);
 
+  // Delete logic 수행
+  const index = movies.indexOf(movie);
+  movies.splice(index, 1);
+
+  // 삭제된 data send
+  res.send(movie);
+})
 
 const port = process.env.PORT || 3000;
 
