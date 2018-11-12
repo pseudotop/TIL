@@ -73,12 +73,12 @@ app.post('/api/users',(req, res) => {
   // user 검색
   const user = findUser(users, newUser);
   // user가 있으면 리턴
-  if (user) return res.send(`UserID ${user.id} is exist`);
+  if (user) return res.status(404).send(`UserID ${user.id} is exist`);
 
   console.log(newUser);
   // Joi로 스키마 검증
   const { error } = validateUser(newUser);
-  if (error) return res.send(error.message);
+  if (error) return res.status(400).send(error.message);
   // User 등록
   updateUser(users, newUser, flags.POST);
   res.send(newUser);
@@ -95,11 +95,11 @@ app.put('/api/users/:id',(req, res) => {
   // user 검색
   const user = findUser(users, req.params.id);
   // user 없으면 리턴
-  if (!user) return res.send(`UserID ${req.params.id} is not exist`);
+  if (!user) return res.status(404).send(`UserID ${req.params.id} is not exist`);
 
   // 스키마 검증
   const { error } = validateUser(req.body);
-  if (error) return res.send(error.message);
+  if (error) return res.status(400).send(error.message);
 
   req.body.id = user.id;
   // 리소스 변경
@@ -112,7 +112,7 @@ app.delete('/api/users/:id',(req, res) => {
   // user 검색
   const user = findUser(users,req.params.id);
   // user 없으면 리턴
-  if (!user) return res.send(`UserID ${req.params.id} is not exist`);
+  if (!user) return res.status(404).send(`UserID ${req.params.id} is not exist`);
   
   // user 삭제
   updateUser(users, user, flags.DELETE);
