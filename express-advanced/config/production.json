@@ -1,0 +1,6 @@
+{
+  "name": "Advanced Express APP - PROD",
+  "DB": {
+    "host": "https://apiserver.server/prod-mail-server"
+  }
+}
