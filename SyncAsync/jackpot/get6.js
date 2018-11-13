@@ -87,9 +87,9 @@ async function run() {
     }
     let total_amount = cnt*1000/2; //전체 판매액의 50%
     total_amount -= ranking["5등"].amount*ranking["5등"].count+ranking["4등"].amount*ranking["4등"].count; 
-    ranking["1등"].amount = total_amount * 0.75 / ranking["1등"].count;
-    ranking["2등"].amount = total_amount * 0.125 / ranking["2등"].count;
-    ranking["3등"].amount = total_amount * 0.125 / ranking["3등"].count;
+    ranking["1등"].amount = Math.round(total_amount * 0.75 / ranking["1등"].count);
+    ranking["2등"].amount = Math.round(total_amount * 0.125 / ranking["2등"].count);
+    ranking["3등"].amount = Math.round(total_amount * 0.125 / ranking["3등"].count);
     let end = new Date().getTime();
     let total = end - start;
     console.log(ranking);  
