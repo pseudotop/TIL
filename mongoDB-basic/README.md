@@ -24,3 +24,28 @@ NoSQL의 대표적인 DBMS.
   - 
 
 ### MongoDB 실행
+
+
+### 참고
+```
+/* 비교 쿼리 연산자
+  $eq (equal)
+  $neq (not equal)
+  $gt (greater than)
+  $gte (greater than or equal to)
+  $lt (less than)
+  $lte (less than or equal to)
+  $in (in)
+  $nin (not in)
+*/
+```
+```
+/* 논리 쿼리 연산자
+  .and
+    Course.find()
+    .and([{ author: 'neo' }, { isPublished: false }])
+  .or
+    Course.find()
+    .or([{ author: 'neo' }, { isPublished: false }])
+*/
+```
