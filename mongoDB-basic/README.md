@@ -25,8 +25,24 @@ NoSQL의 대표적인 DBMS.
 
 ### MongoDB 실행
 
-
 ### 참고
+
+https://docs.mongodb.com/manual/reference/operator/update/
+
+```
+//.find({ price: { $lt: 15, $gt: 10 } })
+  //.find({ price: { $in: [10, 15] } })
+    // .find({ isPublished: true })
+    // .limit(10)
+    // .sort({ name: -1 })
+    // .select({ name: 1, tags: 1 })
+    // .find({ author: /^ne/ }) // 시작을 "ne"로 시작하는 문자열 모두
+    // .find({ author: /hn$/ }) // 끝을 "hn"의 문자열 모두
+    // .find({ author: /.*oh.*/ }) // 문자열 내에 "oh"가 있는 것 모두
+```
+
+
+
 ```
 /* 비교 쿼리 연산자
   $eq (equal)
