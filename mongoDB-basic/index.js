@@ -7,6 +7,7 @@ mongoose.connect('mongodb://localhost/hello-mongo', { useNewUrlParser: true })
 /** Available schema Datatypes
  * : String, Number, Date, Buffer, Boolean, ObjectID, Array
  */
+
 /** Available validating options
  * String: minlength, maxlength, match, enum
  * Numbers, Dates: min, max
