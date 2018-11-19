@@ -16,7 +16,6 @@ const App = () => {
   //return <div>HappyHacking</div>
   //const buttonText = { key: value }; // object는 호출 못함
   const buttonText = ['CL', 'ICK'];
-  const time = new Date();
   return (
     <div>
       <h3>{getTime()}</h3>
