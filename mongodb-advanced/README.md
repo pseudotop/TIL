@@ -8,4 +8,5 @@ mongoose.connect('mongodb://localhost/relation')
   .then(() => console.log('Connected to MongoDB'))
   .catch( error => console.error(error.message));
 ```
+### Data consistency와 직접 호출
 ### 
