@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import SeasonDisplay from './SeasonDisplay';
+import Spinner from './Spinner';
+import ErrorDisplay from './ErrorDisplay';
 
 // const App = () => {
   
@@ -25,20 +27,31 @@ class App extends Component {
     lng: null,
     errorMessage: "",
   };
-    
   // }
 
-  render () {
+  renderContent() {
     // 사용자 거부함
     if (this.state.errorMessage && !this.state.lat) {
-      return (<div>Error: {this.state.errorMessage}</div>)
+      return (
+        <ErrorDisplay message={this.state.errorMessage}>
+          <Spinner message="어디에 계십니까?"/>
+        </ErrorDisplay>
+      )
     }
     // 사용자 허용함
     if (!this.state.errorMessage && this.state.lat) {
       return (<SeasonDisplay latitude={this.state.lat}/>)
     }
     // 허용 여부 기다리는중
-    return (<div>Loading...</div>)
+    return (<Spinner message="어디에 계십니까?" />)
+  }
+
+  render () {
+    return (
+      <div style={{ border: 'solid red 1px' }}>
+        {this.renderContent()}
+      </div>
+    )
   }
   
   componentDidMount() {
