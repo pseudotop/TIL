@@ -67,5 +67,39 @@ my-app
 
 #### 클래스형
 - 클래스형 사용하는 이유는 `state`를 처리하기 위함이다. 
-
 컴포넌트 매개변수로 `props` 값이 안 들어올 때, `defaultProps`를 사용하면 **default**값을 설정할 수 있다.
+##### Controlled Element
+```javascript
+ ...
+  <div className="ui segment container">
+    <form className="ui form">
+      <label htmlFor="keyword">Search</label>
+      <input
+        id="keyword"
+        type="text"
+        onChange={e => this.setState({ keyword: e.target.value.toUpperCase() })}
+        // onClick={this.onInputClick}
+        value={this.state.keyword}
+      />
+    </form>
+  </div>
+ ...
+```
+- `setState()`는 비동기 함수다.
+- 비속어 등의 특정한 단어를 처리하고 싶으면
+```javascript
+ ...
+removeBadwords() {
+  this.setState({
+    
+  });
+}
+ ...
+```
+- convetion: 3-rd party module을 **import**해올 떄, **React**는 다음과 같이 불러온다.
+```javascript
+import React, { Component } from 'react';
+import axios from 'axios'; // third party module
+import ... // third party modules 
+```
+
